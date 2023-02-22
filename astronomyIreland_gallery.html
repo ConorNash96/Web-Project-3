@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Astronomy Ireland</title>
+    <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="astronomyIreland_gallery.css">
+    <link rel="icon" type="image/x-icon" href="images/logoRESIZED.jpeg">
+
+    
+    <script>
+        
+        function myFunction() {
+            var x= document.getElementById("myTopnav");
+            if (x.className == "topnav"){
+                x.className += "responsive";
+            }
+            else{
+                x.className = "topnav";
+            }
+        }
+    
+    </script>
+
+
+    
+
+<body>
+    
+<div class="header-container">
+    <a href ="astronomyIreland_index.html"><img src="images/logoRESIZED.jpeg" id="logo" alt="logo"></a>
+    
+    <div class ="topnav" id="myTopnav">
+        
+        <a href ="astronomyIreland_index.html" >Home</a>
+        <a href ="astronomyIreland_aboutUs.html">About Us</a>
+        <a href ="astronomyIreland_store.html">Store</a>
+        <a href ="astronomyIreland_gallery.html" class ="active">Gallery</a>
+        <a href ="astronomyIreland_styleChoices.html">Style Choices</a>
+        <a href ="astronomyIreland_validationPage.html">Validation</a>
+        <a href ="astronomyIreland_contactUs.html">Contact Us</a>
+        <a href ="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class ="fa fa-bars"></i>
+        </a>
+    
+    <div class="searchbar">
+        <input type="text" placeholder="Search website" id='searchbarTextbox'><button type="submit"><i class="fa fa-search"></i></button>
+    </div>
+    </div>
+    
+    
+         
+    
+        <h1 class="title">Astronomy Ireland</h1>
+        
+    
+              
+</div>
+    
+<div class="main">
+
+    <div class=galleryHeading>
+    <h1 >Gallery</h1>
+    </div>
+    
+    <div class="image mainImg">
+   <img src="images/image1Gallery.jpg" id ="mainImage" alt="main image">
+    </div>
+    
+    <h2 class="subHeading">Move your mouse over the image to view!</h2>
+   
+    <div class="image1">
+   <img src="images/image1GalleryThumbnail_640x360.jpeg" id="1" alt="image 1"></div>
+    
+    <div class="image2"><img src="images/image2GalleryThumbnail.jpeg" id="2" alt="image 2"></div>
+    
+    <div class="image3">
+    <img src="images/image3GalleryThumbnail.jpeg" id="3" alt="image 3"></div>
+    
+    <div class="image4"><img src="images/image4Thumbnail_640x360.jpeg" id="4" alt="image 4"> </div>
+    
+    <div class="nextPrev">
+    <p><a id="previous">Previous</a>
+    <a id="next">Next</a></p>
+    </div>
+    
+</div>
+    
+<div class="footer">
+    <div class="webAcc">
+        <p>Logo with website accreditation</p>
+        <img src ="images/webAcc.jpg" alt="Website accredidation">
+    </div>
+    
+    <div class="footerLinks">
+        <p>Astronomy Ireland is based somewhere in Co. Dublin</p>
+        
+        <p><a href ="astronomyIreland_contactUs.html">Contact Us</a>
+        <a href ="astronomyIreland_aboutUs.html">About us</a></p>
+        <p><a href ="#">Privacy policy</a>
+        <a href ="#">Site map</a></p>
+        <p><a href ="#">Glossary</a>
+        <a href ="#">Copyright</a></p>
+    </div>
+    
+    <div class="socialMedia"> 
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-youtube"></a>
+    </div>
+          
+    
+</div> 
+    
+    <script>
+    
+    let currentImage = 1;
+    
+    document.getElementById('1').addEventListener("mouseover", loadImage);
+    document.getElementById('2').addEventListener("mouseover", loadImage);
+    document.getElementById('3').addEventListener("mouseover", loadImage);
+    document.getElementById('4').addEventListener("mouseover", loadImage);
+    
+     document.getElementById("previous").addEventListener("click",prevLink);
+     document.getElementById("next").addEventListener("click",nextLink);
+    
+     function loadImage()
+    {
+        let imgNum=this.id;
+    document.getElementById("mainImage").src="images/image" +imgNum +"Gallery.jpg";
+        currentImage=imgNum;
+    }
+    
+        function nextLink()
+        {
+         if(currentImage==4)
+                    {
+                        document.getElementById("mainImage").src=
+                            "images/image1Gallery.jpg";
+                        currentImage=1;
+                    }
+                else
+                    {
+                        currentImage++;
+                         document.getElementById("mainImage").src="images/image" +currentImage +"Gallery.jpg";
+                    }  
+
+        }
+
+        function prevLink(){
+                if(currentImage==1)
+                    {
+                        document.getElementById("mainImage").src=
+                            "images/image4Gallery.jpg";
+                        currentImage=4;
+                    }
+                else
+                {
+                    currentImage--;
+                     document.getElementById("mainImage").src="images/image" + currentImage +"Gallery.jpg";
+                }
+            }
+
+</script>
+    
+</body>
+
+    
+    
+</html>

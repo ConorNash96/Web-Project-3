@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Astronomy Ireland</title>
+    <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="astronomyIreland_styleChoices.css">
+    <link rel="icon" type="image/x-icon" href="images/logoRESIZED.jpeg">
+    
+    <script>
+         
+        
+        
+        function myFunction() {
+            var x= document.getElementById("myTopnav");
+            if (x.className == "topnav"){
+                x.className += " responsive";
+            }
+            else{
+                x.className = "topnav";
+            }
+        }
+        
+        
+        function changeHeadingToSpaceMono() {
+       
+           changeHeading.style.fontFamily='Space Mono';
+        }
+        
+         function changeParagraphToSansSerif() {
+       
+           changeParagraph.style.fontFamily= 'sans-serif';
+        }
+        
+         function changeFooterBackgroundColor() {
+       
+           footerId.style.backgroundColor= '#030526';
+          
+        }
+        
+        
+    
+    </script>
+
+
+    
+
+<body>
+    
+<div class="header-container">
+    <a href ="astronomyIreland_index.html"><img src="images/logoRESIZED.jpeg" id="logo" alt="logo"></a>
+    
+    <div class ="topnav" id="myTopnav">
+        
+        <a href ="astronomyIreland_index.html" >Home</a>
+        <a href ="astronomyIreland_aboutUs.html">About Us</a>
+        <a href ="astronomyIreland_store.html">Store</a>
+        <a href ="astronomyIreland_gallery.html">Gallery</a>
+        <a href ="astronomyIreland_styleChoices.html" class ="active">Style Choices</a>
+        <a href ="astronomyIreland_validationPage.html">Validation</a>
+        <a href ="astronomyIreland_contactUs.html">Contact Us</a>
+        <a href ="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class ="fa fa-bars"></i>
+        </a>
+    
+    <div class="searchbar">
+        <input type="text" placeholder="Search website" id='searchbarTextbox'><button type="submit"><i class="fa fa-search"></i></button>
+    </div>
+    </div>
+    
+    
+         
+    
+        <h1 class="title">Astronomy Ireland</h1>
+        
+    
+              
+</div>
+    
+<div class="main">
+    
+    <h1 class="heading">Style Choices</h1>
+
+    <div class ="image1"></div>
+     <div class ="styleDescription1"><h2>Colour scheme </h2><p>
+         Description: For the majority of the components on this website, the color selection was derived from this photo (see left), which is selected as the background image of the header on the home page. </p><input type ="button" value="Click to see the selected footer colour!" id="changeFooterButton"></div>
+     <div class ="styleDescription2"><h2 id="changeHeading">Heading</h2><p>For headings, the Google font 'Space Mono' was selected to help reinforce the astronomy themes of the website.</p>
+    <input type ="button" value="Click to change the heading to space mono!" id="changeHeadingButton"></div>
+     <div class ="image2"></div>
+     <div class ="image3"></div>
+    
+     <div class ="styleDescription3"><h2>Paragraphs</h2><p id ="changeParagraph">For paragraphs and general text, a sans-serif font  was selected to help improve readibility.</p>
+    <input type ="button" value="Click to change the paragraph text to sans-serif!" id="changeParagraphButton"></div>
+    </div>
+         
+        
+
+    
+<div class="footer" id="footerId">
+    <div class="webAcc">
+        <p>Logo with website accreditation</p>
+        <img src ="images/webAcc.jpg" alt="Website Accredidation">
+    </div>
+    
+    <div class="footerLinks">
+        <p>Astronomy Ireland is based somewhere in Co. Dublin</p>
+        
+        <p><a href ="astronomyIreland_contactUs.html">Contact Us</a>
+        <a href ="astronomyIreland_aboutUs.html">About us</a></p>
+        <p><a href ="#">Privacy policy</a>
+        <a href ="#">Site map</a></p>
+        <p><a href ="#">Glossary</a>
+        <a href ="#">Copyright</a></p>
+    </div>
+    
+    <div class="socialMedia"> 
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-youtube"></a>
+    </div>
+          
+    
+</div> 
+    
+   <script>
+        
+        let changeHeading = document.getElementById('changeHeading');
+        let changeHeadingButton = document.getElementById("changeHeadingButton");
+        
+        let changeParagraph = document.getElementById('changeParagraph');
+        let changeParagraphButton = document.getElementById("changeParagraphButton");
+        
+        let footer = document.getElementById('footerId');
+        let changeFooterButton =document.getElementById('changeFooterButton');
+        
+    changeHeadingButton.addEventListener("click", changeHeadingToSpaceMono);
+    changeParagraphButton.addEventListener("click", changeParagraphToSansSerif);
+    changeFooterButton.addEventListener("click", changeFooterBackgroundColor);
+    
+    
+    </script>
+    
+</body>
+    
+ 
+    
+    
+</html>

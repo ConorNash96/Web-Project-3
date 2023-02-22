@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Astronomy Ireland</title>
+    <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="astronomyIreland_store.css">
+    <link rel="icon" type="image/x-icon" href="images/logoRESIZED.jpeg">
+    
+    <script>
+        
+        function myFunction() {
+            var x= document.getElementById("myTopnav");
+            if (x.className === "topnav"){
+                x.className += " responsive";
+            }
+            else{
+                x.className = "topnav";
+            }
+        }
+    
+        function setCookie (){
+            let name_val=document.getElementById("name").value;
+            document.cookie = escape(name_val);
+            
+            alert("Your name is: " + document.cookie);
+            
+            return true;
+        }
+        
+        
+        function getCookie(c_name){
+            let c_start, c_end;
+            if (document.cookie.length>0) {
+                c_start=document.cookie.indexOf(c_name + "=");
+                if (c_start!=-1){
+                    c_start=c_start + c_name.length+1;
+                    c_end=document.cookie.indexOf(";",c_start);
+                    if (c_end==-1)
+                        c_end=document.cookie.length;
+                    return unescape(document.cookie.substring(c_start,c_end));
+                }
+            }
+            return "";
+        }
+        
+        function getAllCookies(){
+            
+            let name_value_cookie=getCookie("name_val");
+
+            document.getElementById("pageHeading").innerHTML=
+                ("Welcome, " + name_value_cookie + ".");
+                 }
+    
+    </script>
+
+ 
+    
+
+<body>
+    
+<div class="header-container">
+    <a href ="astronomyIreland_index.html"><img src="images/logoRESIZED.jpeg" id="logo" alt="logo"></a>
+    
+    <div class ="topnav" id="myTopnav">
+        
+    
+        
+        <a href ="astronomyIreland_index.html" >Home</a>
+        <a href ="astronomyIreland_aboutUs.html" >About Us</a>
+        <a href ="astronomyIreland_store.html" class ="active">Store</a>
+        <a href ="astronomyIreland_gallery.html">Gallery</a>
+        <a href ="astronomyIreland_styleChoices.html">Style Choices</a>
+        <a href ="astronomyIreland_validationPage.html">Validation</a>
+        <a href ="astronomyIreland_contactUs.html">Contact Us</a>
+        <a href ="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class ="fa fa-bars"></i>
+        </a>
+    
+    <div class="searchbar">
+        <input type="text" placeholder="Search website" id='searchbarTextbox'><button type="submit"><i class="fa fa-search"></i></button>
+    </div>
+    </div>
+    
+        <h1 class="title">Astronomy Ireland</h1>
+                  
+</div>
+    
+   <div class="main">
+    <div class="heading"><h1 class="pageHeading">Store</h1></div>
+      
+    <div class="enterName">
+        <form id="form" name="form" method="post">
+        <p>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name">
+        </p>
+        <p>
+            <input type="submit" name="submit" id="submit" value="Submit">
+        </p>
+       
+        </form>
+    </div>
+    <!--Images and product descriptions derived from the existing Astonomy Ireland website (https://www.astroshop.eu/)-->
+    
+     <div class="card1">
+                <img src="images/storeItem1.webp" alt="Item 1">
+                <h3 class="card-title">Omegon Telescope</h3>
+                <p><strong>€119</strong></p>
+                
+                <p class="card-desc"><em>Item description.</em> Donec sapien turpis, auctor vitae neque ut, rhoncus ultricies tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu condimentum ipsum, nec suscipit est.</p>
+            <input type ="button" value="Purchase" class="cta">
+        </div>
+    
+         <div class="card2">
+                <img src="images/storeItem2.webp" alt="Item 2">
+                <h3 class="card-title">Skywatcher telescope Explorer</h3>
+                <p><strong>€119</strong></p>
+                
+               <p class="card-desc"><em>Item description.</em> Donec sapien turpis, auctor vitae neque ut, rhoncus ultricies tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu condimentum ipsum, nec suscipit est.</p>
+             <input type ="button" value="Purchase" class="cta">
+        </div>
+    
+          <div class="card3">
+                <img src="images/storeItem3.webp" alt="Item 3">
+                <h3 class="card-title">Skywatcher telescope EQ-2</h3>
+                <p><strong>€369</strong></p>
+                
+               <p class="card-desc"><em>Item description.</em> Donec sapien turpis, auctor vitae neque ut, rhoncus ultricies tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu condimentum ipsum, nec suscipit est.</p>
+             <input type ="button" value="Purchase" class="cta">
+        </div>
+    
+         <div class="card4">
+               <img src="images/storeItem4.webp" alt="Item 4">
+                <h3 class="card-title">Skywatcher Dobson</h3>
+                <p><strong>€479</strong></p>
+                
+               <p class="card-desc"><em>Item description.</em> Donec sapien turpis, auctor vitae neque ut, rhoncus ultricies tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu condimentum ipsum, nec suscipit est.</p>
+             <input type ="button" value="Purchase" class="cta">
+        </div>
+    
+         <div class="card5">
+                <img src="images/storeItem5.webp" alt="Item 5">
+                <h3 class="card-title">Skywatcher telescope N 200/100</h3>
+                <p><strong>€809</strong></p>
+                
+               <p class="card-desc"><em>Item description.</em> Donec sapien turpis, auctor vitae neque ut, rhoncus ultricies tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu condimentum ipsum, nec suscipit est.</p>
+             <input type ="button" value="Purchase" class="cta">
+        </div>
+    
+         <div class="card6">
+                <img src="images/storeItem6.webp" alt="Item 6">
+                <h3 class="card-title">Skywatcher Advanced X</h3>
+                <p><strong>€699</strong></p>
+                
+               <p class="card-desc"><em>Item description.</em> Donec sapien turpis, auctor vitae neque ut, rhoncus ultricies tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu condimentum ipsum, nec suscipit est.</p>
+             <input type ="button" value="Purchase" class="cta">
+        </div>
+    
+         <div class="card7">
+                <img src="images/storeItem7.webp" alt="Item 7">
+                <h3 class="card-title">Omegon Personal planetarium</h3>
+                <p><strong>€49.90</strong></p>
+                
+               <p class="card-desc"><em>Item description.</em> Donec sapien turpis, auctor vitae neque ut, rhoncus ultricies tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu condimentum ipsum, nec suscipit est.</p>
+             <input type ="button" value="Purchase" class="cta">
+        </div>
+    
+         <div class="card8">
+                <img src="images/storeItem8.webp" alt="Item 8">
+                <h3 class="card-title">Celestron Smartphone Adaptor</h3>
+                <p><strong>€79</strong></p>
+                
+               <p class="card-desc"><em>Item description.</em> Donec sapien turpis, auctor vitae neque ut, rhoncus ultricies tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu condimentum ipsum, nec suscipit est.</p>
+             <input type ="button" value="Purchase" class="cta">
+        </div>
+         <div class="card9">
+                <img src="images/storeItem9.webp" alt="Item 9">
+                <h3 class="card-title">Omegon 2x54 bincolulars</h3>
+                <p><strong>€199</strong></p>
+                
+               <p class="card-desc"><em>Item description.</em> Donec sapien turpis, auctor vitae neque ut, rhoncus ultricies tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu condimentum ipsum, nec suscipit est.</p>
+             <input type ="button" value="Purchase" class="cta">
+        </div>
+    
+         <div class="card10">
+               <img src="images/storeItem10.webp" alt="Item 10">
+                <h3 class="card-title">Baader Hyperion Univeral Mark 4</h3>
+                <p><strong>€275</strong></p>
+                
+               <p class="card-desc"><em>Item description.</em> Donec sapien turpis, auctor vitae neque ut, rhoncus ultricies tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu condimentum ipsum, nec suscipit est.</p>
+            <input type ="button" value="Purchase" class="cta">
+        </div>
+    
+         <div class="card11">
+                <img src="images/storeItem11.webp" alt="Item 11">
+                <h3 class="card-title">Omegon Mount MiniTrack LX</h3>
+                <p><strong>€229</strong></p>
+                
+               <p class="card-desc"><em>Item description.</em> Donec sapien turpis, auctor vitae neque ut, rhoncus ultricies tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu condimentum ipsum, nec suscipit est.</p>
+             <input type ="button" value="Purchase" class="cta">
+        </div>
+    
+         <div class="card12">
+               <img src="images/storeItem12.webp" alt="Item 12">
+                <h3 class="card-title">Vaonis Telescope</h3>
+                <p><strong>€2,499</strong></p>
+                
+               <p class="card-desc"><em>Item description.</em> Donec sapien turpis, auctor vitae neque ut, rhoncus ultricies tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu condimentum ipsum, nec suscipit est.</p>
+             <input type ="button" value="Purchase" class="cta">
+        </div>
+       
+       </div>
+    
+   
+<div class="footer">  
+
+    <div class="webAcc">
+        <p>Logo with website accreditation</p>
+        <img src ="images/webAcc.jpg" alt="Website Accredidation">
+    </div>
+    
+    <div class="footerLinks">
+        <p>Astronomy Ireland is based somewhere in Co. Dublin</p>
+        
+        <p><a href ="astronomyIreland_contactUs.html">Contact Us</a>
+        <a href ="astronomyIreland_aboutUs.html">About us</a></p>
+        <p><a href ="#">Privacy policy</a>
+        <a href ="#">Site map</a></p>
+        <p><a href ="#">Glossary</a>
+        <a href ="#">Copyright</a></p>
+    </div>
+    
+    <div class="socialMedia"> 
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-youtube"></a>
+    </div>
+          
+
+     </div>
+
+    <script>
+        
+        document.getElementById ("form").addEventListener ("submit", setCookie);
+        document.getElementById ("form").addEventListener ("submit", getAllCookies);
+    
+    </script>
+</body>
+    
+    
+</html>

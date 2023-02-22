@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Astronomy Ireland</title>
+    <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <link href="astronomyIreland_contactUs.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/logoRESIZED.jpeg">
+</head>
+    
+    <script>
+        
+        function myFunction() {
+            var x= document.getElementById("myTopnav");
+            if (x.className == "topnav"){
+                x.className += "responsive";
+            }
+            else{
+                x.className = "topnav";
+            }
+        }
+        
+         function validateAll(){
+        
+        let name_val= document.getElementById("name").value;
+        let age_val= document.getElementById("age").value;
+        let email_val= document.getElementById("email").value;
+        let confirmEmail_val= document.getElementById("confirmEmail").value;
+        let userQuery_val = document.getElementById("userQuery").value;
+        
+        if (validate_req()==true  && textfieldLength()==true && isNumeric(age_val)==true && ageValueLimit() ==true && validateEmail(email_val)==true && validate_emailFormat()==true && validate_confirmEmail()==true){
+            
+           document.getElementById("details_form").action = "astronomyIreland_confirmPage.html";
+            
+            localStorage.setItem("name",name_val);
+            localStorage.setItem("age",age_val);
+            localStorage.setItem("email",email_val);
+            localStorage.setItem("userQuery",userQuery_val);
+            
+            return true;
+            
+
+            
+        }
+           
+        else{
+            return false;
+        }
+             
+             
+    }
+      
+        
+    function validate_req(){
+        let name_val= document.getElementById("name").value;
+        if (name_val==null || name_val==""){
+            alert("Please enter your name.");
+            return false;
+        }
+        let age_val = document.getElementById("age").value;
+        if (age_val==null || age_val==""){
+            alert("Please enter your age.");
+            return false;
+        }
+        
+        let email_val= document.getElementById("email").value;
+        if (email_val==null || email_val==""){
+            alert("Please enter your email.");
+            return false;
+        }
+        let confirmEmail_val= document.getElementById("confirmEmail").value;
+        if (confirmEmail_val==null || confirmEmail_val==""){
+            alert("Please enter your email again.");
+            return false;
+        }
+        let userQuery_val= document.getElementById("userQuery").value;
+        if (userQuery_val==null || userQuery_val==""){
+            alert("Please enter your query.");
+            return false;
+        }
+        else {
+        return true;
+           
+            }
+    }
+    
+    function textfieldLength(){
+        let name_val= document.getElementById("name");
+        
+        if (name_val.length>20){
+            alert ("Only 20 characters are permitted in the text field");
+         return false;
+    }
+
+    else {
+        return true;
+    }
+         
+    }
+    
+    function isNumeric(numericValue){
+        const numberPattern = /^[0-9]+$/;
+        if (numberPattern.test(numericValue)==false){
+            alert ("No characters allowed in age field");
+            return false;
+        }
+        else {
+            return true;
+        }
+        
+    }
+    
+    function charactersOnly(phrase){
+        const characterPattern = /^[a-zA-Z._-]+$/;
+        if (characterPattern.test(phrase)==false){
+            alert ("Profession contains numbers");
+            return false;
+        }
+        else {
+            return true;
+            }
+    }
+    
+    function ageValueLimit(){
+        let age_val = document.getElementById("age").value;
+        
+        if (age_val <1 || age_val>100)
+            {
+                alert("Please enter a valid age")
+                return false;
+            }
+        else
+            return true;
+    }
+    
+        
+    
+    function validateEmail(emailAddress){
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        if (emailPattern.test(emailAddress)==false){
+            alert ("Incorrect email format");
+            return false;
+        }
+        else {
+            return true;
+            }
+    }
+     function validate_emailFormat() {
+         let email=document.getElementById("email").value;
+         let apos=email.indexOf("@");
+         let dotpos=email.lastIndexOf(".");
+         if (apos<1 || dotpos-apos<2){
+             alert ("Incorrect email format");
+             return false;
+         }
+         else 
+         {
+             return true;
+         }
+     }
+         
+    function validate_confirmEmail () {
+        let email_val=document.getElementById("email").value;
+        let confirmEmail_val=document.getElementById("confirmEmail").value;
+    
+         if (email_val != confirmEmail_val){
+             alert ("Please enter the same email address");
+             return false;
+         }
+        else{
+            return true;
+        }
+}
+        
+    
+    </script>
+
+ 
+
+<body>
+    
+<div class="header-container">
+    <a href ="astronomyIreland_index.html"><img src="images/logoRESIZED.jpeg" id="logo" alt="logo"></a>
+    
+    <div class ="topnav" id="myTopnav">
+        
+        <a href ="astronomyIreland_index.html">Home</a>
+        <a href ="astronomyIreland_aboutUs.html">About Us</a>
+        <a href ="astronomyIreland_store.html">Store</a>
+        <a href ="astronomyIreland_gallery.html">Gallery</a>
+        <a href ="astronomyIreland_styleChoices.html">Style Choices</a>
+        <a href ="astronomyIreland_validationPage.html">Validation</a>
+        <a href ="astronomyIreland_contactUs.html" class ="active">Contact Us</a>
+        <a href ="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class ="fa fa-bars"></i>
+        </a>
+    
+    <div class="searchbar">
+        <input type="text" placeholder="Search website" id='searchbarTextbox'><button type="submit"><i class="fa fa-search"></i></button>
+    </div>
+    </div>
+    
+    
+         
+    
+        <h1 class="title">Astronomy Ireland</h1>
+        
+    
+              
+</div>
+    
+<div class="main">
+
+    <h1 class="contactUsHeading">Contact Us</h1>
+    
+    <form id="details_form" action="" method="post">
+        
+    <fieldset>
+    <legend>Contact us</legend> 
+        
+        <p><label for="name">Name (max 20 characters) </label><input type ="text" id ="name"></p>
+        <p><label for="age">Age (from 1 to 100) </label><input type ="text" id = "age"></p>
+        <p><label for="email">Email </label><input type ="text" id = "email"></p>
+        <p><label for="confirmEmail">Retype Email Address </label><input type ="text" id = "confirmEmail"></p>
+        <p><label for="userQuery">Do you have a query?</label></p><textarea id="userQuery"name="subject" placeholder="Write something.."></textarea>
+        <p><input type="submit" value="Submit" id="submit"><input type="reset" value ="Reset" id ="reset"></p>
+          
+    </fieldset>
+        
+    </form>
+        
+    <div class="contactUsImage">
+    
+    </div>
+         
+        
+</div>
+    
+<div class="footer">
+    <div class="webAcc">
+        <p>Logo with website accreditation</p>
+        <img src ="images/webAcc.jpg">
+    </div>
+    
+    <div class="footerLinks">
+        <p>Astronomy Ireland is based somewhere in Co. Dublin</p>
+        
+        <p><a href ="#">Contact Us</a>
+        <a href ="#">About us</a></p>
+        <p><a href ="#">Privacy policy</a>
+        <a href ="#">Site map</a></p>
+        <p><a href ="#">Glossary</a>
+        <a href ="#">Copyright</a></p>
+    </div>
+    
+    <div class="socialMedia"> 
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-youtube"></a>
+    </div>
+          
+    
+</div> 
+    
+    
+</body>
+    
+     <script>
+        
+
+	document.getElementById("details_form").addEventListener("submit", validateAll);
+
+
+</script>
+    
+    
+</html>

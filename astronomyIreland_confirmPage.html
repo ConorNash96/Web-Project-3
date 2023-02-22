@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Astronomy Ireland</title>
+    <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="astronomyIreland_confirmPage.css">
+
+    
+    <script>
+        
+        function myFunction() {
+            var x= document.getElementById("myTopnav");
+            if (x.className === "topnav"){
+                x.className += " responsive";
+            }
+            else{
+                x.className = "topnav";
+            }
+        }
+    
+    function displayData(){
+      
+     if (typeof(Storage) !== "undefined"){
+    document.getElementById("fullName").innerHTML =
+      localStorage.getItem("name");
+         
+     document.getElementById("userAge").innerHTML =
+      localStorage.getItem("age");
+         
+     document.getElementById("emailAdd").innerHTML =
+      localStorage.getItem("email");
+         
+    document.getElementById("query").innerHTML =
+      localStorage.getItem("userQuery");
+                                          
+      } 
+      else {
+     alert ('Local storage is not available');
+      }
+  } 
+    	
+    </script>
+
+    
+    
+    
+
+<body>
+    
+<div class="header-container">
+    <a href ="astronomyIreland_index.html"><img src="images/logoRESIZED.jpeg" id="logo" alt="logo"></a>
+    
+    <div class ="topnav" id="myTopnav">
+        
+       
+         <a href ="astronomyIreland_index.html" >Home</a>
+        <a href ="astronomyIreland_aboutUs.html">About Us</a>
+        <a href ="astronomyIreland_store.html">Store</a>
+        <a href ="astronomyIreland_gallery.html">Gallery</a>
+        <a href ="astronomyIreland_styleChoices.html">Style Choices</a>
+        <a href ="astronomyIreland_validationPage.html" >Validation</a>
+        <a href ="astronomyIreland_contactUs.html">Contact Us</a>
+        <a href ="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class ="fa fa-bars"></i>
+        </a>
+   
+    <div class="searchbar">
+        <input type="text" placeholder="Search website" id='searchbarTextbox'><button type="submit"><i class="fa fa-search"></i></button>
+    </div>
+    </div>
+    
+        <h1 class="title">Astronomy Ireland</h1>
+                  
+</div>
+    
+   <div class="main">
+    <div class="heading"><h1>Thanks for your query!</h1></div>
+       
+    <h2 class="subHeading">Here are your details: </h2>
+       
+    <div class ="details">
+       <h3>Name: </h3><p id="fullName">First name: </p>
+       <h3>Age: </h3><p id="userAge">Age: </p>
+       <h3>Email: </h3><p id ="emailAdd">Email: </p>
+       <h3>Query: </h3><p id ="query">Query: </p>
+        
+    </div>
+      
+    
+    </div>
+   
+<div class="footer">  
+
+    <div class="webAcc">
+        <p>Logo with website accreditation</p>
+        <img src ="images/webAcc.jpg" alt="Website Accredidation">
+    </div>
+    
+    <div class="footerLinks">
+        <p>Astronomy Ireland is based somewhere in Co. Dublin</p>
+        
+        <p><a href ="astronomyIreland_contactUs.html">Contact Us</a>
+        <a href ="astronomyIreland_aboutUs.html">About us</a></p>
+        <p><a href ="#">Privacy policy</a>
+        <a href ="#">Site map</a></p>
+        <p><a href ="#">Glossary</a>
+        <a href ="#">Copyright</a></p>
+    </div>
+    
+    <div class="socialMedia"> 
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-youtube"></a>
+    </div>
+          
+
+     </div>
+
+     <script>
+    window.addEventListener("load", displayData);
+    </script>
+</body>
+   
+   
+    
+    
+</html>
